@@ -1,0 +1,4 @@
+---
+# tasks file for reddit_in_docker
+- include: install_docker.yml
+- include: start_container.yml
