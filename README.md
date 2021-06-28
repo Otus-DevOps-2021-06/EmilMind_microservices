@@ -13,9 +13,7 @@ EmilMind microservices repository
         docker inspect <u_container_id> и docker inspect <u_image_id>        
         ~~~
  - Задание *2:
-    - Автоматизировал поднятие нескольких инстансов в Yandex Cloud, установку на них докера и запуск там образа freezy503/otus-reddit:1.0
-
-    - Автоматизация поднятия нескольких инстансов в Yandex Cloud, установка на них Docker и запуск образа /otus-reddit:1.0
+    - Автоматизация поднятия нескольких инстансов в Yandex Cloud, установка на них Docker и запуск образа emilmind/otus-reddit:1.0
         - Terraform
         ~~~bash
         cd docker-monolith/infra/terraform terraform && terraform init && terraform apply -auto-approve
