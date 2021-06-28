@@ -1,0 +1,10 @@
+REPOSITORY                 TAG       IMAGE ID       CREATED          SIZE
+emilmind/ubuntu-tmp-file   latest    6cabc66f8271   18 seconds ago   63.1MB
+nginx                      latest    4f380adfc10f   5 days ago       133MB
+ubuntu                     18.04     7d0d8fa37224   10 days ago      63.1MB
+portainer/portainer-ce     latest    96a1c6cc3d15   4 months ago     209MB
+
+
+Разница в выводе информации о контейнере и образе:
+    - в контейнере хранится информация о запущенном образе, его статусе и информации о работе с ресурсами, сетью, файловой системой
+    - в образе же хранится информация о его составе, времени создании, слоях и необходимых точках входа и запуска
