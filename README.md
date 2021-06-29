@@ -60,3 +60,22 @@ EmilMind microservices repository
     docker run -d --network=reddit --network-alias=comment emilmind/comment:1.0
     docker run -d --network=reddit -p 9292:9292 emilmind/ui:2.0
     ~~~
+
+
+## Docker-4
+В процессе сделано:
+ - Основное задание:
+    - Разобраться с работой сети в Docker 
+        - none
+        - host
+        - bridge
+    - Разобраться с работой Docker-compose
+        - Установить docker-compose на локальную машину
+        - Собрать образы приложения reddit с помощью docker-compose
+        - Запустить приложение reddit с помощью docker-compose
+ - Базовое имя проекта:
+    - По умолчанию за базовое имя проекта берется имя директории, в котором находится docker-compose.yml.
+    - Имя проекта можно изменить, указав флаг (-p, --project-name) и желаемое имя.
+    ~~~bash
+    docker-compose --project-name reddit up -d
+    ~~~
