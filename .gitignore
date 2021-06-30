@@ -13,3 +13,5 @@ packer/variables.json
 .molecule
 .cache
 .pytest_cache
+
+/src/.env
