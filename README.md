@@ -79,3 +79,12 @@ EmilMind microservices repository
     ~~~bash
     docker-compose --project-name reddit up -d
     ~~~
+
+
+## Gitlab_ci-1
+В процессе сделано:
+ - Основное задание:
+    - Подготовить инсталляцию Gitlab CI
+    - Подготовить репозиторий с кодом приложения
+    - Описать для приложения этапы пайплайна
+    - Определить окружения
