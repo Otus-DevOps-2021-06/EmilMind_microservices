@@ -1,0 +1,83 @@
+version: '3.3'
+services:
+  post_db:
+    container_name: reddit-mongodb
+    image: mongo:${ver_mongo}
+    volumes:
+      - post_db:/data/db
+    networks:
+      - back_net
+  ui:
+    # build: ./ui
+    container_name: reddit-ui
+    image: ${USERNAME}/ui:${ver_ui}
+    ports:
+      - ${port_ui}:9292/tcp
+    networks:
+      - front_net
+  post:
+    # build: ./post-py
+    container_name: reddit-post
+    image: ${USERNAME}/post:${ver_post}
+    networks:
+      - back_net
+      - front_net
+  comment:
+    # build: ./comment
+    container_name: reddit-comment
+    image: ${USERNAME}/comment:${ver_comment}
+    networks:
+      - back_net
+      - front_net
+
+
+  prometheus:
+    container_name: reddit-prometheus
+    image: ${USERNAME}/prometheus
+    ports:
+      - '9090:9090'
+    volumes:
+      - prometheus_data:/prometheus
+    command: # Передаем доп параметры в командной строке
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention=1d' # Задаем время хранения метрик в 1 день
+    networks:
+      - front_net
+      - back_net
+
+  node-exporter:
+    container_name: reddit-node-exporter
+    image: prom/node-exporter:v0.15.2
+    user: root
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
+    networks:
+      - front_net
+      - back_net
+
+
+
+volumes:
+  post_db:
+  prometheus_data:
+
+networks:
+  back_net:
+    # driver: bridge
+    # ipam: 
+    #     driver: default
+    #     config: 
+    #         - subnet: 10.0.2.0/24
+  front_net:
+    # driver: bridge
+    # ipam: 
+    #     driver: default
+    #     config: 
+    #         - subnet: 10.0.1.0/24
