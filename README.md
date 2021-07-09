@@ -138,3 +138,15 @@ Repo: https://hub.docker.com/u/emilmind
    - Запустить reddit в Kubernetes (Скриншоты в папке reddit/screen)
 - Задание со *:
    - Развернул Kubernetes-кластер в Yandex cloud с помощью Terraform модуля
+
+## Kubernetes-3
+
+В процессе сделано:
+ - Основное задание:
+   - Настроить доступ к приложению из вне с помощью Load Balancer
+   - Заменить Load Balancer на Ingress Controller с nginx
+   - Создать Ingress, с поддержкой TLS
+   - Создать Network Policy для ограничения входящего траффика к сервису mongodb
+   - Добавить PersistentVolumes и PersistentVolumesClaims
+- Задание со *:
+   - Описать создаваемый объект Secret в виде Kubernetes-манифеста (kubernetes/reddit/ui-ingress-secret.yml)
