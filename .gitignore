@@ -4,6 +4,7 @@ packer/variables.json
 *.tfstate.*.backup
 *.tfstate.backup
 *.tfvars
+*.lock.hcl
 .terraform/
 *.retry
 
@@ -15,3 +16,4 @@ packer/variables.json
 .pytest_cache
 
 /src/.env
+/docker/.env
