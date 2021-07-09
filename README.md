@@ -128,3 +128,13 @@ Repo: https://hub.docker.com/u/emilmind
    - Установка k8s на двух нодах при помощи утилиты kubeadm
    - Настройка сетевого плагина Calico 
    - Запуск манифестов приложения на кластере
+
+## Kubernetes-2
+
+В процессе сделано:
+ - Основное задание:
+   - Развернуть локальное окружение для работы с Kubernetes (minicube)
+   - Развернуть Kubernetes в Yandex Cloud
+   - Запустить reddit в Kubernetes (Скриншоты в папке reddit/screen)
+- Задание со *:
+   - Развернул Kubernetes-кластер в Yandex cloud с помощью Terraform модуля
