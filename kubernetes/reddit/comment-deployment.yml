@@ -20,10 +20,10 @@ spec:
         component: comment
     spec:
       containers:
-      - image: emilmind/comment
-        name: comment
-        env:
-        - name: COMMENT_DATABASE_HOST
-          value: comment-db
-        - name: COMMENT_DATABASE
-          value: comment
+        - image: emilmind/comment
+          name: comment
+          env:
+            - name: COMMENT_DATABASE_HOST
+              value: comment-db
+            - name: COMMENT_DATABASE
+              value: comment
