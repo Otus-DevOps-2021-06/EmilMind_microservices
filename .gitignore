@@ -8,7 +8,8 @@ packer/variables.json
 .terraform/
 *.retry
 
-# Vagrant & molecule
+*Gitlab_ci
+
 .vagrant/
 *.pyc
 .molecule
@@ -16,4 +17,4 @@ packer/variables.json
 .pytest_cache
 
 /src/.env
-/docker/.env
+/docker/.env 
