@@ -117,7 +117,7 @@ Repo: https://hub.docker.com/u/emilmind
    - Визуализация логов
    - Сбор структурированных логов
    - Распределенный трейсинг
-- Задание со *:
+- Задание *1:
    - Составить конфигурацию Fluentd так, чтобы разбирались оба формата логов UI-сервиса одновременно.
 
 ## Kubernetes-1
@@ -136,7 +136,7 @@ Repo: https://hub.docker.com/u/emilmind
    - Развернуть локальное окружение для работы с Kubernetes (minicube)
    - Развернуть Kubernetes в Yandex Cloud
    - Запустить reddit в Kubernetes (Скриншоты в папке reddit/screen)
-- Задание со *:
+- Задание *1:
    - Развернул Kubernetes-кластер в Yandex cloud с помощью Terraform модуля
 
 ## Kubernetes-3
@@ -148,7 +148,7 @@ Repo: https://hub.docker.com/u/emilmind
    - Создать Ingress, с поддержкой TLS
    - Создать Network Policy для ограничения входящего траффика к сервису mongodb
    - Добавить PersistentVolumes и PersistentVolumesClaims
-- Задание со *:
+- Задание *1:
    - Описать создаваемый объект Secret в виде Kubernetes-манифеста (kubernetes/reddit/ui-ingress-secret.yml)
 
 ## Kubernetes-4
@@ -158,3 +158,13 @@ Repo: https://hub.docker.com/u/emilmind
    - Работа с Helm
    - Развертывание Gitlab в Kubernetes
    - Запуск CI/CD конвейера в Kubernetes
+
+## Kubernetes-5
+
+В процессе сделано:
+ - Основное задание:
+   - Развертывание Prometheus в k8s
+   - Настройка Prometheus и Grafana для сбора метрик
+
+- Задание *1:
+   - Запустил alertmanager в k8s и настроил правила для контроля за доступностью api-сервера и хостов k8s
