@@ -150,3 +150,11 @@ Repo: https://hub.docker.com/u/emilmind
    - Добавить PersistentVolumes и PersistentVolumesClaims
 - Задание со *:
    - Описать создаваемый объект Secret в виде Kubernetes-манифеста (kubernetes/reddit/ui-ingress-secret.yml)
+
+## Kubernetes-4
+
+В процессе сделано:
+ - Основное задание:
+   - Работа с Helm
+   - Развертывание Gitlab в Kubernetes
+   - Запуск CI/CD конвейера в Kubernetes
